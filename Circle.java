@@ -14,10 +14,18 @@ public class Circle {
 		}
 	
 	
-   public void setRadius(float radius) {
-		this.radius=radius;              
-   }                                    
-	
+  public void setRadius(float radius) {
+	  
+	   this.radius=radius; 
+	   if(radius<0) {
+		   System.out.println("Radius must me positive");
+		   
+	   }
+	   else
+	   {
+		   this.radius=radius; 
+	   }
+
    public void setX(int x) {
 		this.x=x;   
 	}
@@ -52,7 +60,7 @@ public class Circle {
 
 		void calculateDiameter(){
 
-		 System.out.println("Diameter : "+getRadius()+getRadius());
+		 System.out.println("Diameter : "+2*getRadius());
 
 		}
 
